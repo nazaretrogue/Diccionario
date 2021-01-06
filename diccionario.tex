@@ -1,0 +1,106 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}	%Idioma
+\usepackage{graphicx} 	%Añadir imágenes
+\usepackage{geometry}	%Ajustar márgenes
+\usepackage[export]{adjustbox}[2011/08/13]
+\usepackage{float}
+\usepackage{extarrows,pgffor}
+\restylefloat{table}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\usepackage[shortlabels]{enumitem}
+\selectlanguage{spanish}
+
+%Opciones de encabezado y pie de página:
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\rhead{\empty}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+%Opciones de fuente:
+\usepackage[utf8]{inputenc}
+\usepackage[default]{sourcesanspro}
+\usepackage{sourcecodepro}
+\usepackage[T1]{fontenc}
+
+\setlength{\parindent}{15pt}
+\setlength{\headheight}{15pt}
+\setlength{\voffset}{10mm}
+
+% Custom colors
+\usepackage{color}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+% Macros para definición de palabras
+\newcommand{\palabra}[1]{\item \textbf{#1}}
+\newcommand{\definicion}[1]{\begin{enumerate}
+													\foreach \entry in {#1}
+													{
+														\item \entry
+													}
+												\end{enumerate}}
+
+\begin{document}
+\begin{titlepage}
+
+\begin{minipage}{\textwidth}
+
+\centering
+\includegraphics[width=0.5\textwidth]{./portada.png}\\
+
+{\Huge\bfseries Diccionario personal\\}
+\noindent\rule[-1ex]{\textwidth}{3pt}\\[3.5ex]
+\end{minipage}
+\end{titlepage}
+
+\pagenumbering{gobble}
+\pagenumbering{arabic}
+\tableofcontents
+\thispagestyle{empty}
+
+\newpage
+
+\section{Letra B}
+\begin{itemize}
+	\palabra{Beligerante}:
+		\definicion{Que está en guerra con otro., Que está dispuesto a la hostilidad o que se muestra enfrentado o en desacuerdo a una persona\, un grupo o a una cosa.}
+\end{itemize}
+
+\section{Letra D}
+\begin{itemize}
+	\palabra{Dádiva}: Cosa que se da como regalo.
+	\palabra{Deslavazado}:
+		\definicion{Que es insustancial o insulso., Que carece de unión entre sus partes\, o está desordenado o mal compuesto.}
+\end{itemize}
+
+\section{Letra I}
+\begin{itemize}
+	\palabra{Imprecar}: Expresar vivamente el deseo de que alguien sufra un daño o un mal.
+\end{itemize}
+
+\section{Letra M}
+\begin{itemize}
+	\palabra{Mezcolanza}: [DESPECTIVO] Mezcla extraña, a veces confusa e incluso ridícula de personas, cosas o ideas opuestas o inconexas.
+\end{itemize}
+
+\section{Letra O}
+\begin{itemize}
+	\palabra{Ominoso}: Que es abominable y merece ser condenado y aborrecido.
+\end{itemize}
+
+\section{Letra S}
+\begin{itemize}
+	\palabra{Superchería}: Engaño o fraude consistente en sustituir una cosa verdadera por una falsa.
+\end{itemize}
+
+\section{Letra V}
+\begin{itemize}
+	\palabra{Vilipendio}: Desprecio o denigración grave.
+\end{itemize}
+
+\end{document}
